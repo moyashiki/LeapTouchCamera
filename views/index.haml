@@ -1,0 +1,9 @@
+%link{:type => "text/css", :rel => "stylesheet", :href => "s.css"}
+.jumbo
+  %h1{:align=>"center"} Marvelous Vision
+- Dir.glob("public/*.png") do |path|
+  - filename=File.basename(path)
+  .span6
+    .thumbnail
+      %img(src=filename width=640 height=360)
+%br
